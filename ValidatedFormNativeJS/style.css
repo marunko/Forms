@@ -18,14 +18,15 @@
 form{
 	margin-top: 20%;
 }
-form div label{
+form div h1{
 	 
 	margin-left: 25%;
 	margin-right: 25%;
-	font-size: 200%;
-
-	 
+	font-size: 250%;
+	font-family: Georgia, serif;
+ 
 }
+
 form input {
 	width: 50%;
 	margin-left: 25%;
