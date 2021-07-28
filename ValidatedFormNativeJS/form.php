@@ -20,7 +20,7 @@
 					<p id="message_age"></p>
 				</div>
 			<div id="submit"> 
-				<input type="submit" name="submit">
+				<input type="submit" name="submit" value="Submit">
 			</div>
 			</form>
 		</div>
