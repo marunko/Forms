@@ -37,6 +37,7 @@ function valid_age(e){
 	if(text > 0 && text < 125){
 
 			e.target.style = "border: solid green;";
+			document.querySelector('#message_age').innerText = "";
 			age_valid = true;
 	}
 	else{
@@ -56,7 +57,7 @@ function submitter(e) {
 	xml.onreadystatechange = function() {
     	if (this.readyState == 4 && this.status == 200) {
 			var res = JSON.parse(xml.response);
-			let name = res.name[0].toUpperCase() + res.name.slice(1, res.name.length-1);
+			let name = res.name[0].toUpperCase() + res.name.slice(1, res.name.length);
 			document.querySelector('#response').innerHTML =  "<h1>Name: " + name  + "</h1></br>" + "<h1>Age: " + res.age + "</h1>";
 			console.log(name.toUpperCase());
 		}
@@ -70,13 +71,19 @@ document.forms.form1.age.addEventListener('change', valid_age);
 
 document.forms.form1.submit.addEventListener('click', function(e){
  e.preventDefault();
- if(age_valid && name_valid){
+	if(age_valid && name_valid){
  		submitter();
+ 		e.target.style = "border: 1px solid black;";
 	}
 
-  else{
-  	console.log("wrong data");
+ 	 else if(!name_valid){
+  	console.log("wrong name");  	
+  	valid_name(e);
+  	document.forms.form1.name.style = "border: solid red;";
+  	}
+  	if(!age_valid){
+  	console.log("wrong age");
   	 valid_age(e);
-  	 valid_name(e);
-  }
+  	 document.forms.form1.age.style = "border: solid red;";
+ 	}
 });
