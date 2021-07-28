@@ -1,0 +1,57 @@
+@keyframes button_play {
+    from {
+        background-color: red;
+    }
+    25%{
+        background-color: yellow;
+    }
+    50%{
+        background-color: green;
+    }
+    75%{
+        background-color: blue;
+    }
+    to {
+        background-color: violet;
+    }
+}
+form{
+	margin-top: 20%;
+}
+form div label{
+	 
+	margin-left: 25%;
+	margin-right: 25%;
+	font-size: 200%;
+
+	 
+}
+form input {
+	width: 50%;
+	margin-left: 25%;
+	height: 40px;
+	font-size: 110%;
+}
+
+form input[type="submit"]:hover{
+	cursor: pointer;
+	background-color: red;
+	animation-name: button_play;
+	animation-duration: 5s;
+	animation-iteration-count: 3;
+	animation-direction: alternate;
+}
+
+form div p{
+	margin-left: 25%;
+	margin-right: 25%;
+	font-size: 200%;
+	color: red;
+}
+
+#response{
+	width: 50%;
+	margin-left: 25%;
+	height: 40px;
+	font-size: 110%;
+}
