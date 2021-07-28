@@ -9,7 +9,7 @@
 	<body>
 		<div> 
 			<form action="" method="POST" name="form1">
-				<div align="center"><label>The Form</label></div>
+				<div align="center"><h1>The Form</h1></div>
 				<div>
 					<input type="text" name="name">
 					<p id="message_name"></p>
