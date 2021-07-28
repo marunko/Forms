@@ -27,6 +27,6 @@
 		<div id="response">
 			
 		</div>
-		<script type="text/javascript" src="xmlAsync.js"></script>
+		<script type="text/javascript" src="validateSend.js"></script>
 	</body>
 </html>	 
